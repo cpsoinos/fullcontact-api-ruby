@@ -1,0 +1,18 @@
+language: ruby
+
+rvm:
+  - 2.0.0
+  - 2.1.0
+  - 2.2.0
+  - 2.3.0
+
+gemfile:
+  - Gemfile
+
+sudo: false
+
+cache: bundler
+
+before_script: "bundle update"
+
+script: "bundle exec rake test"
